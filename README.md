@@ -74,7 +74,7 @@ pip install -r requirements.txt
 
 ---
 
-## Usage
+### Usage
 Run the notebook
 jupyter notebook notebook.ipynb
 Run Flask app
