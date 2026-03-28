@@ -74,7 +74,7 @@ pip install -r requirements.txt
 
 
 
-Usage
+## Usage
 Run the notebook
 jupyter notebook notebook.ipynb
 Run Flask app
@@ -86,7 +86,7 @@ Due to GitHub size limitations, model weights are not included.
 Download from:
 https://drive.google.com/drive/folders/1NGUaJes5SfEilNXqjMjAB7kTMyB5MkgC
 
-Technologies Used
+## Technologies Used
 Python
 PyTorch
 NumPy
@@ -94,14 +94,16 @@ Pandas
 Matplotlib
 Nibabel
 Flask
-Future Improvements
+
+## Future Improvements
 Enhance Dice Score through hyperparameter tuning
 Extend to 3D segmentation
 Deploy on cloud platforms (AWS / GCP)
-Author
+
+## Author
 
 Bilal Ahmed
 Bachelor of Science in Software Engineering
 
-Interests:
+## Interests:
 Artificial Intelligence, Medical Imaging, Deep Learning
