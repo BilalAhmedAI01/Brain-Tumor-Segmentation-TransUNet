@@ -2,5 +2,5 @@ __pycache__/
 *.pyc
 *.pt
 *.pth
-.env
 .DS_Store
+.env
