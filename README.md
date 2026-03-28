@@ -142,6 +142,8 @@ Bachelor of Science in Software Engineering
 
 Artificial Intelligence, Medical Imaging, Deep Learning
 
+---
+
 ## Installation
 
 ```bash
