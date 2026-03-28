@@ -72,7 +72,7 @@ The application was tested using ngrok to enable external access and simulate re
 ```bash
 pip install -r requirements.txt
 
-
+---
 
 ## Usage
 Run the notebook
@@ -85,6 +85,7 @@ Due to GitHub size limitations, model weights are not included.
 
 Download from:
 https://drive.google.com/drive/folders/1NGUaJes5SfEilNXqjMjAB7kTMyB5MkgC
+---
 
 ## Technologies Used
 Python
@@ -94,11 +95,14 @@ Pandas
 Matplotlib
 Nibabel
 Flask
+---
 
 ## Future Improvements
 Enhance Dice Score through hyperparameter tuning
 Extend to 3D segmentation
 Deploy on cloud platforms (AWS / GCP)
+
+---
 
 ## Author
 
@@ -107,3 +111,4 @@ Bachelor of Science in Software Engineering
 
 ## Interests:
 Artificial Intelligence, Medical Imaging, Deep Learning
+---
