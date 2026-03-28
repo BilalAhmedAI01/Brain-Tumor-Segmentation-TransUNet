@@ -2,38 +2,68 @@
 
 ## Overview
 
-This project presents a deep learning-based solution for brain tumor segmentation using the TransUNet architecture. The system integrates Convolutional Neural Networks (CNNs) with Vision Transformers to effectively capture both local spatial features and global contextual dependencies in MRI scans.
+Brain tumor segmentation is a critical task in medical image analysis, enabling accurate diagnosis, treatment planning, and patient monitoring. This project presents a deep learning-based solution using the TransUNet architecture, which combines Convolutional Neural Networks (CNNs) with Vision Transformers to capture both local spatial features and global contextual dependencies in MRI scans.
 
-In addition to model development, a complete web-based interface has been implemented using Flask, enabling real-time visualization and prediction of tumor segmentation results.
+Unlike conventional approaches, this system not only focuses on model performance but also provides a practical deployment through a Flask-based web application, allowing real-time interaction and visualization of segmentation results.
+
+This project demonstrates how advanced deep learning models can be applied to real-world healthcare challenges.
+
+---
+
+## Key Highlights
+
+* Implementation of advanced hybrid architecture (TransUNet)  
+* Comparative analysis with UNet baseline  
+* Achieved Dice Score of **0.75** on medical dataset  
+* End-to-end pipeline: preprocessing → training → prediction → deployment  
+* Flask-based web application with real-time inference  
+* Deployment testing using ngrok for external accessibility  
 
 ---
 
 ## Dataset
 
 * BraTS 2023 Dataset  
-* Multi-modal MRI scans: T1, T1c, T2, FLAIR  
+* Multi-modal MRI scans:
+  * T1  
+  * T1c  
+  * T2  
+  * FLAIR  
 
 ---
 
 ## Methodology
 
-* MRI preprocessing (normalization, resizing, modality handling)  
+### Data Preprocessing
 
-* Implementation of:
-  * UNet (baseline model)  
-  * TransUNet (hybrid CNN + Transformer model)  
+* MRI normalization  
+* Resizing and standardization  
+* Multi-modal data handling  
 
-* Model training and evaluation using Dice Similarity Coefficient (DSC)  
+### Model Implementation
 
-* Comparative performance analysis  
+* **UNet**
+  * Baseline convolutional architecture for segmentation  
+
+* **TransUNet**
+  * Hybrid CNN + Transformer architecture  
+  * CNN extracts spatial features  
+  * Transformer captures long-range dependencies  
+
+### Evaluation Metric
+
+* Dice Similarity Coefficient (DSC) used for segmentation accuracy  
 
 ---
 
-## Results
+## Model Performance
 
-* TransUNet Dice Score: **0.75**  
+| Model      | Dice Score |
+|-----------|----------|
+| UNet      | ~0.65 (baseline) |
+| TransUNet | **0.75** |
 
-* TransUNet demonstrated improved segmentation accuracy over the baseline UNet model due to its ability to capture long-range dependencies  
+TransUNet outperforms the baseline model due to its ability to capture global context, which is essential for precise tumor boundary detection.
 
 ---
 
@@ -41,40 +71,49 @@ In addition to model development, a complete web-based interface has been implem
 
 ![Segmentation Result](sample_result/transunet_result.png)
 
+*Note: If the image is not visible, ensure the file exists at:*  
+`sample_results/transunet_result.png`
+
+---
+
+## System Workflow
+
+1. User uploads MRI scan  
+2. Image is preprocessed  
+3. TransUNet model performs segmentation  
+4. Tumor region is predicted  
+5. Output is visualized through web interface  
+
 ---
 
 ## Web Application (Deployment)
 
-A Flask-based web application was developed to make the model accessible through a user interface.
+A Flask-based web application was developed to provide an interactive interface for users.
 
 ### Features
 
 * Upload MRI scans  
-* Perform segmentation  
+* Perform tumor segmentation  
 * Visualize predicted tumor regions  
+* Simple and user-friendly interface  
 
-The application was tested using ngrok to enable external access and simulate real-world deployment.
+The application was tested using ngrok, enabling remote access and simulating real-world deployment scenarios.
 
 ---
 
 ## Project Structure
-
-* notebook.ipynb → Model training and evaluation  
-* sample_result/ → Sample predictions  
-* models/ → Pretrained model download instructions  
-* requirements.txt → Dependencies  
-
----
+* ├── notebook.ipynb # Model training and evaluation
+* ├── sample_results/ # Sample outputs
+* ├── models/ # Model download instructions
+* ├── requirements.txt # Dependencies
 
 
+## Pretrained Models
 
-## Usage
-* Run the notebook
-* jupyter notebook notebook.ipynb
-* Run Flask app
-* python app.py
-* Pretrained Models
+Due to GitHub file size limitations, trained model weights are not included.
 
+Download from:
+https://drive.google.com/drive/folders/1NGUaJes5SfEilNXqjMjAB7kTMyB5MkgC
 
 ## Technologies Used
 * Python
@@ -84,27 +123,34 @@ The application was tested using ngrok to enable external access and simulate re
 * Matplotlib
 * Nibabel
 * Flask
-* Future Improvements
-* Enhance Dice Score through hyperparameter tuning
-* Extend to 3D segmentation
+## Future Improvements
+* Improve Dice Score through hyperparameter tuning
+* Extend to 3D medical image segmentation
 * Deploy on cloud platforms (AWS / GCP)
+* Optimize model for real-time clinical usage
 
+## Impact
+
+This project highlights the potential of deep learning in assisting medical professionals with faster and more accurate tumor detection. By integrating advanced AI models with accessible web applications, it bridges the gap between research and real-world healthcare solutions.
 ## Author
 
-* Bilal Ahmed
-* Bachelor of Science in Software Engineering
+Bilal Ahmed
+Bachelor of Science in Software Engineering
 
 ## Interests:
-* Artificial Intelligence
-* Medical Imaging
-* Deep Learning
 
-Due to GitHub size limitations, model weights are not included.
-
-Download from:
-https://drive.google.com/drive/folders/1NGUaJes5SfEilNXqjMjAB7kTMyB5MkgC
+Artificial Intelligence, Medical Imaging, Deep Learning
 
 ## Installation
 
 ```bash
 pip install -r requirements.txt
+
+## Usage
+
+### Run Jupyter Notebook
+
+```bash
+jupyter notebook notebook.ipynb
+
+### The deployment pipeline is integrated within the Jupyter Notebook using Flask and ngrok, enabling quick testing without a standalone backend script.
