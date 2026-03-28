@@ -41,7 +41,6 @@ In addition to model development, a complete web-based interface has been implem
 
 ![Segmentation Result](sample_result/transunet_result)
 
-
 ---
 
 ## Web Application (Deployment)
@@ -60,10 +59,10 @@ The application was tested using ngrok to enable external access and simulate re
 
 ## Project Structure
 
-* `notebook.ipynb` → Model training and evaluation  
-* `sample_result/` → Sample predictions  
-* `models/` → Pretrained model download instructions  
-* `requirements.txt` → Dependencies  
+* notebook.ipynb → Model training and evaluation  
+* sample_result/ → Sample predictions  
+* models/ → Pretrained model download instructions  
+* requirements.txt → Dependencies  
 
 ---
 
@@ -72,22 +71,16 @@ The application was tested using ngrok to enable external access and simulate re
 ```bash
 pip install -r requirements.txt
 
----
 
-### Usage
+Usage
 Run the notebook
 jupyter notebook notebook.ipynb
 Run Flask app
 python app.py
 Pretrained Models
 
-Due to GitHub size limitations, model weights are not included.
 
-Download from:
-https://drive.google.com/drive/folders/1NGUaJes5SfEilNXqjMjAB7kTMyB5MkgC
----
-
-## Technologies Used
+Technologies Used
 Python
 PyTorch
 NumPy
@@ -95,20 +88,20 @@ Pandas
 Matplotlib
 Nibabel
 Flask
----
-
-## Future Improvements
+Future Improvements
 Enhance Dice Score through hyperparameter tuning
 Extend to 3D segmentation
 Deploy on cloud platforms (AWS / GCP)
-
----
-
-## Author
+Author
 
 Bilal Ahmed
 Bachelor of Science in Software Engineering
 
-## Interests:
-Artificial Intelligence, Medical Imaging, Deep Learning
----
+Interests:
+Artificial Intelligence
+Medical Imaging
+Deep Learning
+Due to GitHub size limitations, model weights are not included.
+
+Download from:
+https://drive.google.com/drive/folders/1NGUaJes5SfEilNXqjMjAB7kTMyB5MkgC
